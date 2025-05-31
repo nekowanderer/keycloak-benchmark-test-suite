@@ -1,0 +1,8 @@
+.DS_Store
+
+*results
+*aggregated-report
+*build
+*reports
+
+__pycache__
