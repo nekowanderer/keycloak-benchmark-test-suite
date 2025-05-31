@@ -1,0 +1,12 @@
+FROM python:3.13-slim
+
+WORKDIR /app
+
+COPY aggregate_results.py .
+COPY results/ ./results/
+COPY aggregated-report-template/ ./aggregated-report-template/
+COPY test_results_aggregator/ ./test_results_aggregator/
+
+RUN pip install beautifulsoup4
+
+ENTRYPOINT ["python", "aggregate_results.py"]
